@@ -25,9 +25,9 @@ module "lambda" {
     stage  = "dev"
 
     get_all_authors_arn = module.iam.get_all_authors_role_arn
-    //save_course_arn     = module.iam.save_course_role_arn
-    //update_course_arn   = module.iam.update_course_role_arn
-    //get_all_courses_arn = module.iam.get_all_courses_role_arn
-    //get_one_course_arn  = module.iam.get_one_course_role_arn
-    //delete_course_arn   = module.iam.delete_course_role_arn
+    save_course_arn     = module.iam.save_course_role_arn
+    update_course_arn   = module.iam.update_course_role_arn
+    get_all_courses_arn = module.iam.get_all_courses_role_arn
+    get_one_course_arn  = module.iam.get_one_course_role_arn
+    delete_course_arn   = module.iam.delete_course_role_arn
 }

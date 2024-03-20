@@ -1,7 +1,11 @@
-output "table_info" {
-  value = {
-    table_name    = aws_dynamodb_table.this.name
-    hash_key      = aws_dynamodb_table.this.hash_key
-    dynamodb_arn  = aws_dynamodb_table.this.arn
-  }
+output "table_name" {
+    value = aws_dynamodb_table.this.name
+}
+
+output "hash_key" {
+    value = aws_dynamodb_table.this.hash_key
+}
+
+output "dynamodb_arn" {
+  value = aws_dynamodb_table.this.arn
 }
