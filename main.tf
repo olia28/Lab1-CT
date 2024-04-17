@@ -31,3 +31,21 @@ module "lambda" {
     get_one_course_arn  = module.iam.get_one_course_role_arn
     delete_course_arn   = module.iam.delete_course_role_arn
 }
+
+module "api" {
+    source = "./modules/api"
+    region = "eu-central-1"
+    name = "my-api"
+    myprofile = var.myprofile
+
+    get_all_authors_invoke_arn = module.lambda.get_all_authors_invoke_arn
+    get_all_authors_arn = module.lambda.get_all_authors_arn
+    get_all_courses_invoke_arn = module.lambda.get_all_courses_invoke_arn
+    get_all_courses_arn = module.lambda.get_all_courses_arn
+    save_course_arn = module.lambda.save_course_arn
+    save_course_invoke_arn = module.lambda.save_course_invoke_arn
+    get_one_course_arn = module.lambda.get_one_course_arn
+    get_one_course_invoke_arn = module.lambda.get_one_course_invoke_arn
+    delete_course_arn = module.lambda.delete_course_arn
+    delete_course_invoke_arn = module.lambda.delete_course_invoke_arn
+}

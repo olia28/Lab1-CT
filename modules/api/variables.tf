@@ -8,7 +8,7 @@ variable "myprofile" {
 
 
 variable "get_all_authors_invoke_arn" {
-  type = string
+   type = string
 }
 
 variable "get_all_courses_invoke_arn" {
