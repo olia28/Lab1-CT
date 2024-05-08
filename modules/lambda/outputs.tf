@@ -22,6 +22,10 @@ output "update_course_arn" {
   value = aws_lambda_function.update_course.arn
 }
 
+output "update_course_invoke_arn" {
+  value = aws_lambda_function.update_course.invoke_arn
+}
+
 output "get_all_courses_arn" {
   value = aws_lambda_function.get_all_courses.arn
 }

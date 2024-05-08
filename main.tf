@@ -1,3 +1,7 @@
+locals {
+  tag_name = var.use_locals ? "forum" : var.bucket_name
+}
+
 module "course" {
     source = "./modules/dynamodb"
     name = "courses"
@@ -35,7 +39,7 @@ module "lambda" {
 module "api" {
     source = "./modules/api"
     region = "eu-central-1"
-    name = "my-api"
+    name = "my-million-api"
     myprofile = var.myprofile
 
     get_all_authors_invoke_arn = module.lambda.get_all_authors_invoke_arn
@@ -48,4 +52,6 @@ module "api" {
     get_one_course_invoke_arn = module.lambda.get_one_course_invoke_arn
     delete_course_arn = module.lambda.delete_course_arn
     delete_course_invoke_arn = module.lambda.delete_course_invoke_arn
+    update_course_arn = module.lambda.update_course_arn
+    update_course_invoke_arn = module.lambda.update_course_invoke_arn
 }

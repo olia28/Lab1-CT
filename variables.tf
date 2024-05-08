@@ -16,3 +16,13 @@ variable "aws_region" {
 variable "myprofile" {
   default = "admin-user"
 }
+
+variable "bucket_name" {
+  type    = string
+  default = "just-a-unique-bucket-2024"
+}
+
+variable "use_locals" {
+  type    = bool
+  default = true
+}

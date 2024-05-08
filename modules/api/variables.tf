@@ -6,9 +6,8 @@ variable "myprofile" {
   type = string
 }
 
-
 variable "get_all_authors_invoke_arn" {
-   type = string
+  type = string
 }
 
 variable "get_all_courses_invoke_arn" {
@@ -25,6 +24,14 @@ variable "save_course_arn" {
 }
 
 variable "save_course_invoke_arn" {
+  type = string
+}
+
+variable "update_course_arn" {
+  type = string
+}
+
+variable "update_course_invoke_arn" {
   type = string
 }
 
